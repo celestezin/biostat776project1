@@ -108,7 +108,7 @@ chocolate %>%
   mutate(cocoa_percent_cat = cut(cocoa_percent_num, breaks = 
                                      c(0, 60, 70, 90, Inf))) %>%
   group_by(country_of_bean_origin) %>%
-  filter(n() > 50) %>%
+  filter(n() > 49) %>%
   ggplot(aes(x = cocoa_percent_cat, y = rating)) +
    labs(title = "Box plot of ratings by cocoa percentage per country",
        x = "Cocoa percentage",
